@@ -1,22 +1,11 @@
-<html>
-    <head>
-        <title>Ian's blog</title>
-    </head>
-    <body>
-        <div>
-            <h1><a href="">Ian's Blog</a></h1>
-        </div>
+<div>
+    <h1><a href="/">Ian's Blog</a></h1>
+</div>
 
-        <div>
-            <p>published: May 11th 2017, 10:46</p>
-            <h2><a href="">My first post</a></h2>
-            <p>Hello, world!.</p>
-        </div>
-
-        <div>
-            <p>published: May 11th 2017, 10:48</p>
-            <h2><a href="">My second post</a></h2>
-            <p>WOOT</p>
-        </div>
-    </body>
-</html>
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
