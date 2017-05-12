@@ -1,5 +1,18 @@
 <div>
     <h1><a href="/">Ian's Blog</a></h1>
+
+    <div>
+            <p>published: May 12th, 12:21</p>
+            <h2><a href="">My first post</a></h2>
+            <p>Hello, world!</p>
+        </div>
+
+        <div>
+            <p>published: May 12th, 12:22</p>
+            <h2><a href="">My second post</a></h2>
+            <p>It worked!</p>
+        </div>
+
 </div>
 
 {% for post in posts %}
@@ -8,4 +21,7 @@
         <h1><a href="">{{ post.title }}</a></h1>
         <p>{{ post.text|linebreaksbr }}</p>
     </div>
+
+
+
 {% endfor %}
